@@ -1,0 +1,389 @@
+type: edu
+files:
+  - name: src/machine/CoffeeMachine.java
+    visible: true
+    text: "package machine;\nimport java.util.Scanner;\npublic class CoffeeMachine {\n\
+    \    public static int water=0,milk=0,coffeeBeans=0,cups=0,money=0;\n    public\
+    \ static void setWater(int x){\n        water=x;\n    }\n    public static int\
+    \ getWater(){\n        return water;\n    }\n    public static void addWater(int\
+    \ x){\n        water+=x;\n    }\n    public static void removeWater(int x){\n\
+    \        water-=x;\n    }\n    public static void setMilk(int x){\n        milk=x;\n\
+    \    }\n    public static int getMilk(){\n        return milk;\n    }\n    public\
+    \ static void addMilk(int x){\n        milk+=x;\n    }\n    public static void\
+    \ removeMilk(int x){\n        milk-=x;\n    }\n    public static void setCoffeeBeans(int\
+    \ x){\n        coffeeBeans=x;\n    }\n    public static int getCoffeeBeans(){\n\
+    \        return coffeeBeans;\n    }\n    public static void addCoffeeBeans(int\
+    \ x){\n        coffeeBeans+=x;\n    }\n    public static void removeCoffeeBeans(int\
+    \ x){\n        coffeeBeans-=x;\n    }\n    public static void setCups(int x){\n\
+    \        cups=x;\n    }\n    public static int getCups(){\n        return cups;\n\
+    \    }\n    public static void addCups(int x){\n        cups+=x;\n    }\n    public\
+    \ static void removeCups(int x){\n        cups-=x;\n    }\n    public static void\
+    \ setMoney(int x){\n        money=x;\n    }\n    public static int getMoney(){\n\
+    \        return money;\n    }\n    public static void addMoney(int x){\n     \
+    \   money+=x;\n    }\n    public static void removeMoney(int x){\n        money-=x;\n\
+    \    }\n    public static void printCoffeeMachine(){\n        System.out.println(\"\
+    The coffee machine has:\");\n        System.out.println(water + \" ml of water\"\
+    );\n        System.out.println(milk + \" ml of milk\");\n        System.out.println(coffeeBeans\
+    \ + \" grams of coffee beans\");\n        System.out.println(cups + \" disposable\
+    \ cups\");\n        System.out.println(\"$\" + money + \" of money\");\n    }\n\
+    \    public static void buyExpresso(){\n        removeWater(250);\n        removeCoffeeBeans(16);\n\
+    \        removeCups(1);\n        addMoney(4);\n    }\n    public static void buyLatte(){\n\
+    \        removeWater(350);\n        removeMilk(75);\n        removeCoffeeBeans(20);\n\
+    \        removeCups(1);\n        addMoney(7);\n    }\n    public static void buyCappuccino(){\n\
+    \        removeWater(200);\n        removeMilk(100);\n        removeCoffeeBeans(12);\n\
+    \        removeCups(1);\n        addMoney(6);\n    }\n    public static boolean\
+    \ enoughWater(int x){\n        if(water>=x)\n        return true;\n        System.out.println(\"\
+    Sorry, not enough water!\");\n        return false;\n    }\n    public static\
+    \ boolean enoughMilk(int x){\n        if(milk>=x)\n        return true;\n    \
+    \    System.out.println(\"Sorry, not enough milk!\");\n        return false;\n\
+    \    }\n    public static boolean enoughCoffeeBeans(int x){\n        if(coffeeBeans>=x)\n\
+    \        return true;\n        System.out.println(\"Sorry, not enough coffee beans!\"\
+    );\n        return false;\n    }\n    public static boolean makeExpresso(){\n\
+    \        if(!enoughWater(250))\n        return false;\n        if(!enoughCoffeeBeans(16))\n\
+    \        return false;\n        return true;\n    }\n    public static boolean\
+    \ makeLatte(){\n        if(!enoughWater(350))\n        return false;\n       \
+    \ if(!enoughMilk(75))\n        return false;\n        if(!enoughCoffeeBeans(20))\n\
+    \        return false;\n        return true;\n    }\n    public static boolean\
+    \ makeCappuccino(){\n        if(!enoughWater(200))\n        return false;\n  \
+    \      if(!enoughMilk(100))\n        return false;\n        if(!enoughCoffeeBeans(12))\n\
+    \        return false;\n        return true;\n    }\n    public static void buy(){\n\
+    \        Scanner sc=new Scanner(System.in);\n        System.out.println(\"What\
+    \ do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main\
+    \ menu: \");\n        String choice=sc.nextLine();\n        switch(choice){\n\
+    \            case \"1\": if(makeExpresso())\n                      {\n       \
+    \                   System.out.println(\"I have enough resources, making you a\
+    \ coffee!\");\n                          buyExpresso();\n                    \
+    \  }\n                      break;\n            case \"2\": if(makeLatte())\n\
+    \                      {\n                          System.out.println(\"I have\
+    \ enough resources, making you a coffee!\");\n                          buyLatte();\n\
+    \                      }\n                      break;\n            case \"3\"\
+    : if(makeCappuccino())\n                      {\n                          System.out.println(\"\
+    I have enough resources, making you a coffee!\");\n                          buyCappuccino();\n\
+    \                      }\n                      break;\n            case \"back\"\
+    : break;\n            default: \n        }\n    }\n    public static void fill(){\n\
+    \        Scanner sc=new Scanner(System.in);\n        System.out.println(\"Write\
+    \ how many ml of water you want to add: \");\n        int x=sc.nextInt();\n  \
+    \      addWater(x);\n        System.out.println(\"Write how many ml of milk you\
+    \ want to add: \");\n        x=sc.nextInt();\n        addMilk(x);\n        System.out.println(\"\
+    Write how many grams of coffee beans you want to add: \");\n        x=sc.nextInt();\n\
+    \        addCoffeeBeans(x);\n        System.out.println(\"Write how many disposable\
+    \ cups you want to add: \");\n        x=sc.nextInt();\n        addCups(x);\n \
+    \   }\n    public static void take(){\n        int x=getMoney();\n        System.out.println(\"\
+    I gave you $\" + x);\n        setMoney(0);\n    }\n    public static void chooseActions(){\n\
+    \        Scanner sc=new Scanner(System.in);\n        while(true){\n          System.out.println(\"\
+    Write action (buy, fill, take, remaining, exit): \");\n          String choice=sc.nextLine();\n\
+    \          switch(choice){\n            case \"buy\":     //printCoffeeMachine();\n\
+    \                            buy();\n                            //printCoffeeMachine();\n\
+    \                            break;\n            case \"fill\":    //printCoffeeMachine();\n\
+    \                            fill();\n                            //printCoffeeMachine();\n\
+    \                            break;\n            case \"take\":    //printCoffeeMachine();\n\
+    \                            take();\n                            //printCoffeeMachine();\n\
+    \                            break;\n            case \"remaining\": printCoffeeMachine();\n\
+    \                              break;\n            case \"exit\": return;\n  \
+    \          default: \n          }\n        }\n    }\n    public static void coffeeMake(){\n\
+    \        System.out.println(\"Starting to make a coffee\");\n        System.out.println(\"\
+    Grinding coffee beans\");\n        System.out.println(\"Boiling water\");\n  \
+    \      System.out.println(\"Mixing boiled water with crushed coffee beans\");\n\
+    \        System.out.println(\"Pouring coffee into the cup\");\n        System.out.println(\"\
+    Pouring some milk into the cup\");\n        System.out.print(\"Coffee is ready!\"\
+    );\n    }\n    public static void calculateIngredients(){\n        Scanner sc=new\
+    \ Scanner(System.in);\n        System.out.println(\"Write how many cups of coffee\
+    \ you will need: \");\n        int cup=sc.nextInt();\n        int water=cup*200;\n\
+    \        int milk=cup*50;\n        int coffeeBeans=cup*15;\n        System.out.println(\"\
+    For 125 cups of coffee you will need:\");\n        System.out.println(water+\"\
+    \ ml of water\");\n        System.out.println(milk+\" ml of milk\");\n       \
+    \ System.out.println(coffeeBeans+\" g of coffee beans\");\n    }\n    public static\
+    \ int minThree(int a,int b,int c){\n         return c<(a<b?a:b)?c:(a<b?a:b);\n\
+    \    }\n    public static void estimateServings(){\n        Scanner sc=new Scanner(System.in);\n\
+    \        System.out.println(\"Write how many ml of water the coffee machine has:\
+    \ \");\n        int water=sc.nextInt();\n        System.out.println(\"Write how\
+    \ many ml of milk the coffee machine has: \");\n        int milk=sc.nextInt();\n\
+    \        System.out.println(\"Write how many grams of coffee beans the coffee\
+    \ machine has: \");\n        int coffeeBeans=sc.nextInt();\n        System.out.println(\"\
+    Write how many cups of coffee you will need: \");\n        int cup=sc.nextInt();\n\
+    \        int sufficientWater=water/200;\n        int sufficientMilk=milk/50;\n\
+    \        int sufficientCoffeeBeans=coffeeBeans/15;\n        int cupPossible=minThree(sufficientWater,sufficientMilk,sufficientCoffeeBeans);\n\
+    \        int extraCups=cupPossible-cup;\n        if(extraCups<0){\n          \
+    \  System.out.println(\"No, I can make only \" + cupPossible + \" cup(s) of coffee\"\
+    );      \n        } else if(extraCups==0){\n            System.out.println(\"\
+    Yes, I can make that amount of coffee\"); \n        } else {\n            System.out.println(\"\
+    Yes, I can make that amount of coffee (and even \" + extraCups + \" more than\
+    \ that)\"); \n        }\n    }\n    public static void setCoffeeMachine(){\n \
+    \       setWater(400);\n        setMilk(540);\n        setCoffeeBeans(120);\n\
+    \        setCups(9);\n        setMoney(550);\n    }\n    public static void main(String[]\
+    \ args) {\n        //coffeeMake();\n        //calculateIngredients();\n      \
+    \  //estimateServings();\n        setCoffeeMachine();\n        chooseActions();\n\
+    \    }\n}\n"
+    learner_created: false
+  - name: test/CoffeeMachineTest.java
+    visible: false
+    text: |
+      import org.hyperskill.hstest.stage.StageTest;
+      import org.hyperskill.hstest.testcase.CheckResult;
+      import org.hyperskill.hstest.testcase.TestCase;
+      
+      import java.util.ArrayList;
+      import java.util.List;
+      
+      
+      class TestClue {
+          int water;
+          int milk;
+          int beans;
+          int cups;
+          int money;
+          String feedback;
+          TestClue(int w, int m, int b, int c, int mo, String feedback) {
+              water = w;
+              milk = m;
+              beans = b;
+              cups = c;
+              money = mo;
+              this.feedback = feedback;
+          }
+      }
+      
+      public class CoffeeMachineTest extends StageTest<TestClue> {
+      
+          @Override
+          public List<TestCase<TestClue>> generate() {
+              return List.of(
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          700 - 400,
+                          390 - 540,
+                          80 - 120 ,
+                          7 - 9,
+                          0 - 550,
+                          "This test is exactly " +
+                              "like in the example - try to run it by yourself"))
+                      .setInput(
+                          "remaining\n" +
+                              "buy\n" +
+                              "2\n" +
+                              "buy\n" +
+                              "2\n" +
+                              "fill\n" +
+                              "1000\n" +
+                              "0\n" +
+                              "0\n" +
+                              "0\n" +
+                              "buy\n" +
+                              "2\n" +
+                              "take\n" +
+                              "remaining\n" +
+                              "exit\n"),
+      
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          3000,
+                          3000,
+                          3000 ,
+                          3000,
+                          0,
+                          "This test checks \"fill\" action"))
+                      .setInput(
+                          "remaining\n" +
+                              "fill\n" +
+                              "3000\n" +
+                              "3000\n" +
+                              "3000\n" +
+                              "3000\n" +
+                              "remaining\n" +
+                              "exit\n"),
+      
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          -250,
+                          0,
+                          -16 ,
+                          -1,
+                          4, "This test checks \"buy\" " +
+                          "action with the first variant of coffee"))
+                      .setInput(
+                          "remaining\n" +
+                              "buy\n" +
+                              "1\n" +
+                              "remaining\n" +
+                              "exit\n"),
+      
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          -350,
+                          -75,
+                          -20 ,
+                          -1,
+                          7, "This test checks \"buy\" " +
+                          "action with the second variant of coffee"))
+                      .setInput(
+                          "remaining\n" +
+                              "buy\n" +
+                              "2\n" +
+                              "remaining\n" +
+                              "exit\n"),
+      
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          -200,
+                          -100,
+                          -12 ,
+                          -1,
+                          6, "This test checks \"buy\" " +
+                          "action with the third variant of coffee"))
+                      .setInput(
+                          "remaining\n" +
+                              "buy\n" +
+                              "3\n" +
+                              "remaining\n" +
+                              "exit\n"),
+      
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          0,
+                          0,
+                          0 ,
+                          0,
+                          -550, "This test checks \"take\" action"))
+                      .setInput(
+                          "remaining\n" +
+                              "take\n" +
+                              "remaining\n" +
+                              "exit\n"),
+      
+                  new TestCase<TestClue>()
+                      .setAttach(new TestClue(
+                          0,
+                          0,
+                          0 ,
+                          0,
+                          0, "This test checks \"back\" " +
+                          "action right after \"buy\" action"))
+                      .setInput(
+                          "remaining\n" +
+                              "buy\n" +
+                              "back\n" +
+                              "remaining\n" +
+                              "exit\n")
+              );
+          }
+      
+          @Override
+          public CheckResult check(String reply, TestClue clue) {
+              String[] lines = reply.split("\\n");
+      
+              if (lines.length <= 1) {
+                  return CheckResult.wrong("Looks like you didn't print anything!");
+              }
+      
+              int water_ = clue.water;
+              int milk_ = clue.milk;
+              int beans_ = clue.beans;
+              int cups_ = clue.cups;
+              int money_ = clue.money;
+      
+              List<Integer> milk = new ArrayList<>();
+              List<Integer> water = new ArrayList<>();
+              List<Integer> beans = new ArrayList<>();
+              List<Integer> cups = new ArrayList<>();
+              List<Integer> money = new ArrayList<>();
+      
+              for (String line : lines) {
+                  line = line.replace("$", "").trim();
+                  String[] words = line.split("\\s+");
+                  if (words.length == 0) {
+                      continue;
+                  }
+                  String firstWord = words[0];
+                  int amount;
+                  try {
+                      amount = Integer.parseInt(firstWord);
+                  }
+                  catch (Exception e) {
+                      continue;
+                  }
+                  if (line.contains("milk")) {
+                      milk.add(amount);
+                  }
+                  else if (line.contains("water")) {
+                      water.add(amount);
+                  }
+                  else if (line.contains("beans")) {
+                      beans.add(amount);
+                  }
+                  else if (line.contains("cups")) {
+                      cups.add(amount);
+                  }
+                  else if (line.contains("money")) {
+                      money.add(amount);
+                  }
+              }
+      
+              if (milk.size() != 2) {
+                  return new CheckResult(false,
+                      "There should be two lines with \"milk\", " +
+                          "found: " + milk.size());
+              }
+      
+              if (water.size() != 2) {
+                  return new CheckResult(false,
+                      "There should be two lines with \"water\", " +
+                          "found: " + water.size());
+              }
+      
+              if (beans.size() != 2) {
+                  return new CheckResult(false,
+                      "There should be two lines with \"beans\", " +
+                          "found: " + beans.size());
+              }
+      
+              if (cups.size() != 2) {
+                  return new CheckResult(false,
+                      "There should be two lines with \"cups\", " +
+                          "found: " + cups.size());
+              }
+      
+              if (money.size() != 2) {
+                  return new CheckResult(false,
+                      "There should be two lines with \"money\", " +
+                          "found: " + money.size());
+              }
+      
+              int milk0 = milk.get(0);
+              int milk1 = milk.get(milk.size() - 1);
+      
+              int water0 = water.get(0);
+              int water1 = water.get(water.size() - 1);
+      
+              int beans0 = beans.get(0);
+              int beans1 = beans.get(beans.size() - 1);
+      
+              int cups0 = cups.get(0);
+              int cups1 = cups.get(cups.size() - 1);
+      
+              int money0 = money.get(0);
+              int money1 = money.get(money.size() - 1);
+      
+              int diffWater = water1 - water0;
+              int diffMilk = milk1 - milk0;
+              int diffBeans = beans1 - beans0;
+              int diffCups = cups1 - cups0;
+              int diffMoney = money1 - money0;
+      
+              boolean isCorrect =
+                  diffWater == water_ &&
+                      diffMilk == milk_ &&
+                      diffBeans == beans_ &&
+                      diffCups == cups_ &&
+                      diffMoney == money_;
+      
+              return new CheckResult(isCorrect, clue.feedback);
+          }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5334#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Wed, 24 Jan 2024 05:26:30 UTC"
+record: 6

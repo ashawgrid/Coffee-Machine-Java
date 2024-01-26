@@ -1,0 +1,11 @@
+custom_name: Method "main"
+content:
+  - Theory
+  - "Print  Hello, Java"
+  - Print  We are robots
+  - No main args
+  - Fixing the main method
+  - Select all correct statements
+  - Invoking a greeting method within another method
+  - Count the number of characters in a given string
+  - A strange declaration of the main method

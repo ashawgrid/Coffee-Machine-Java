@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Coffee Machine Simulator with Java/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Calling varargs" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/How to invoke the method" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Inverse boolean flags" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Varargs method invocation" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/What does the code print" />
+            <option value="$PROJECT_DIR$/Topics/Declaring methods/Method signature" />
+            <option value="$PROJECT_DIR$/Topics/Declaring methods/Sum of numbers in the range" />
+            <option value="$PROJECT_DIR$/Topics/Declaring methods/Syntactically correct declarations" />
+            <option value="$PROJECT_DIR$/Topics/Declaring methods/The sign of a number" />
+            <option value="$PROJECT_DIR$/Topics/Declaring methods/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/A class with a single integer field" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Accounts" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Creating a book class and displaying book details" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Implementing class with private member and getter method" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Missing parts" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Points" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Representing time as a class" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/The keyword" />
+            <option value="$PROJECT_DIR$/Topics/Defining classes/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Calculator with four methods" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Decomposing switch cases in Java" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/How to decompose correctly" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Method createFullName" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Rate categorization based on integer input" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Why decompose a program" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/A required part of a class" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Account" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Automatically created constructor" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Automatically generated constructor" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Complex numbers" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Default constructor" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Geometric cube" />
+            <option value="$PROJECT_DIR$/Topics/Initializing new instances. Constructor/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Check if an array contains two numbers" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Classifying integers as 'Odd' or 'Even'" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select loops" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select one loop" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/A strange declaration of the main method" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Count the number of characters in a given string" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Fixing the main method" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Invoking a greeting method within another method" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/No main args" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Print  Hello, Java" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Print  We are robots" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Select all correct statements" />
+            <option value="$PROJECT_DIR$/Topics/Method  main/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Accessing fields" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Army" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Completing the Dog class program" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Filling in the blanks for a canine-centric code" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Find reference types" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Immutability" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Objects and their properties/What is my age" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Applying the static keyword" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Detail manufacturing" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Project constants and methods" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Theory" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
