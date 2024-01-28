@@ -380,10 +380,16 @@ files:
           }
       }
     learner_created: false
+  - name: src/machine/Actions.java
+    visible: true
+    learner_created: true
+  - name: src/machine/CoffeeType.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5334#comment
 status: Solved
 feedback:
   message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
     to continue learning.
-  time: "Wed, 24 Jan 2024 05:26:30 UTC"
+  time: "Sun, 28 Jan 2024 18:56:08 UTC"
 record: 6
